@@ -1,0 +1,52 @@
+//--------------------------------------------------------------
+//                    Variables
+//--------------------------------------------------------------
+
+/*Fonts*/
+$baseFontFamily: 'Ubuntu', sans-serif;
+$baseFontSize: 14px;
+$baseLineHeight: 21px;
+$baseFont: 400 #{$baseFontSize}/#{$baseLineHeight} $baseFontFamily;
+$secFontFamily: 'Ubuntu', sans-serif;
+
+
+/*Colors*/
+$primary: #34b1da;
+$primaryLight: lighten(saturate(adjust_hue($primary, -0.13842604460396046), 22.99019607843138%), 27.05882352941176%);
+$secondary: #2f2f2f;
+$baseColor: #888;
+$color1: #b9b9b9;
+$textPrimary: #2f2f2f;
+$textSecondary: #fff;
+
+$borderColor: #ededed;
+$borderColor1: #ededed;
+$stockBg: #e9e9e9;
+$stockBgHover: $primary;
+
+/*Backgrounds*/
+$headerBg: #f2f2f2;
+$footerBg: #464646;
+$contentBg: $footerBg;
+$baseBg: $footerBg;
+
+/*Border-radius*/
+$baseBorderRadius: 0;
+
+/*Box Shadow*/
+$baseBoxShadow: 1px 1px 8px rgba($textPrimary,.15);
+
+$primary1: #00bcd4;
+$primary2: #00bcd4;
+$primary3: #f0503c;
+$primary4: #a2ca37;
+$primary5: #a373e1;
+
+/*Colors Themes*/
+$schemes: (
+	scheme_1 : ( $primary1 ),
+	scheme_2 : ( $primary2 ),
+	scheme_3 : ( $primary3 ),
+	scheme_4 : ( $primary4 ),
+	scheme_5 : ( $primary5 )
+);

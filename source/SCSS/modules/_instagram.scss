@@ -1,0 +1,73 @@
+/*========================================================
+					TemplateMonster Instagram
+=========================================================*/
+.instagram {
+	padding-bottom: 15px;
+	i{
+		font-size: 18px;
+		margin-right: 8px;
+	}
+	.instagram__item {
+		background: #000;
+		position: relative;
+		@include transition(all .3s ease);
+		color: #fff;
+		img {
+			@include transition(all .3s ease);
+			opacity: .6;
+		}
+		&:hover {
+			img {
+				opacity:.9;
+			}
+			.activities {
+				opacity:1;
+			}
+		}
+	}
+	.caption {
+		display:none;
+	}
+	.activities {
+		position:absolute;
+		width:100%;
+		top:50%;
+		text-align:center;
+		opacity:0;
+		@include transform(translateY(-50%));
+		@include transition(all .3s ease);
+	}
+}
+
+@media (max-width: 1199px) {
+	.instagram__item {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.instagram {
+		margin-bottom: 0;
+		.content > div {
+			margin-bottom: 0;
+		}
+		a img {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.instagram {
+		margin-bottom: 0;
+		padding-bottom: 0;
+		#instafeed{
+			> a {
+				margin-bottom: 15px;
+			}
+		}
+		[class*="col-xs"] {
+			width: 50%;
+		}
+	}
+}

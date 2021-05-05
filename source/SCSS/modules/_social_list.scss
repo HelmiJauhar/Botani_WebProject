@@ -1,0 +1,104 @@
+/* ===================   Social list   =================== */
+$facebookBg       : $primary;
+$youtubeBg        : $primary;
+$googleBg         : $primary;
+$twitterBg        : $primary;
+$pinterestBg      : $primary;
+$instagramBg      : $primary;
+$vimeoBg          : $primary;
+
+.social-block {
+	footer & {
+		position: absolute;
+		bottom: -49px;
+		right: 12px;
+		z-index: 2;
+	}
+	.box-heading{
+		h3,h5{
+			margin: 0;
+		}
+	}
+	.box-content {
+		p {
+			color: $textSecondary;
+			margin: 0;
+		}
+	}
+}
+.social-list {
+	margin: 0;
+	display: inline-block;
+	li{
+		display: inline-block;
+		margin: 0;
+		text-align: center;
+		a {
+			@include transition(all 0.4s ease);
+			font-size: 12px;
+			line-height: 25px;
+			display: block;
+
+			&[class*="youtube"] {
+				color: $youtubeBg;
+			}
+			&[class*="facebook"] {
+				color: $facebookBg;
+			}
+			&[class*="google"] {
+				color: $googleBg;
+			}
+			&[class*="twitter"] {
+				color: $twitterBg;
+			}
+			&[class*="pinterest"] {
+				color: $pinterestBg;
+			}
+			&[class*="instagram"] {
+				color: $instagramBg;
+			}
+			&[class*="vimeo"] {
+				color: $vimeoBg;
+			}
+			&:hover {
+				color: $textPrimary;
+			}
+		}
+		& + li {
+			margin-left: 7px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.social-list li {
+		a {
+			font-size: 17px;
+		}
+		& + li {
+			margin-left: 8px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	footer .social-block {
+		position: relative;
+		float: left;
+		text-align: left;
+		bottom: 0;
+		right: auto;
+		margin-bottom: 15px;
+	}
+	.social-list {
+		li{
+			a {
+				font-size: 18px;
+				line-height: 29px;
+			}
+			+ li {
+				margin-left: 10px;
+			}
+		}
+	}
+}
